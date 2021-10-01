@@ -33,6 +33,11 @@ public class ActividadController {
         return actividadService.getActividadById(actividadId);
     }
 
+    @GetMapping(path = "/getActividadByPerson/{person_id}")
+    public List<Actividad> getActividadByPerson(@PathVariable("person_id") Long person_id){
+        return actividadService.getActividadByPerson(person_id);
+    }
+
     @PostMapping(path ="/addActividad")
     public String addActividad(@RequestBody Actividad actividad){
         actividadService.addActividad(actividad);

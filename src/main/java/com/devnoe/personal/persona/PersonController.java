@@ -34,7 +34,6 @@ public class PersonController {
         return personService.getPersonById(personId);
     }
 
-
     @PostMapping(path = "/addPerson")
     public String addPerson(@RequestBody Person person){
         personService.addPerson(person);

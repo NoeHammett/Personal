@@ -46,7 +46,8 @@ public class PersonService {
 		if(!exist){
 			throw new IllegalStateException("Persona con Id "+ personId + " no existe");
 		}
-		personRepository.deleteById(personId);
+			personRepository.deleteById(personId);
+		
 	}
 
 	@Transactional

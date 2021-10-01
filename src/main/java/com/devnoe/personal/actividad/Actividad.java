@@ -21,27 +21,29 @@ public class Actividad {
     private String descripcion;
     private Long horas;
     private Long tipo_actividad;
+    private Long person_id;
 
 
     public Actividad() {
     }
 
-    public Actividad( String nombre, String descripcion, Long horas, Long tipo_actividad) {
+    public Actividad(String nombre, String descripcion, Long horas, Long tipo_actividad, Long person_id) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.horas = horas;
         this.tipo_actividad = tipo_actividad;
+        this.person_id = person_id;
     }
-    
-    public Actividad(Long id_actividad, String nombre, String descripcion, Long horas, Long tipo_actividad) {
+
+    public Actividad(Long id_actividad, String nombre, String descripcion, Long horas, Long tipo_actividad, Long person_id) {
         this.id_actividad = id_actividad;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.horas = horas;
         this.tipo_actividad = tipo_actividad;
+        this.person_id = person_id;
     }
-  
-
+    
     public Long getId_actividad() {
         return this.id_actividad;
     }
@@ -81,4 +83,14 @@ public class Actividad {
     public void setTipo_actividad(Long tipo_actividad) {
         this.tipo_actividad = tipo_actividad;
     }
+
+    public Long getPerson_id() {
+        return this.person_id;
+    }
+
+    public void setPerson_id(Long person_id) {
+        this.person_id = person_id;
+    }
+
+
 }

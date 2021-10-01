@@ -28,6 +28,10 @@ public class ActividadService {
         return actividad;
     }
 
+    public List<Actividad> getActividadByPerson(Long person_id) {
+        return actividadRepository.findActividadByPerson(person_id);
+    }     
+
     public void addActividad(Actividad actividad) {
         actividadRepository.save(actividad);
     }
@@ -54,6 +58,6 @@ public class ActividadService {
         if(actividadR.getHoras() != null  && !Objects.equals(actividad.getHoras(), actividadR.getHoras())){
             actividad.setHoras(actividadR.getHoras());
         }
-    }       
+    }
     
 }

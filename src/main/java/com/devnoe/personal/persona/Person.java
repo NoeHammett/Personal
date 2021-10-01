@@ -30,28 +30,29 @@ public class Person {
     private Integer edad;
     private LocalDate nacimiento;
     private String email;
-
-        
     public Person() {
     }
 
-    public Person(String nombre, String primer_apellido, String segundo_apellido,LocalDate nacimiento, String email) {
+
+    public Person( String nombre, String primer_apellido, String segundo_apellido, Integer edad, LocalDate nacimiento, String email) {
         this.nombre = nombre;
         this.primer_apellido = primer_apellido;
         this.segundo_apellido = segundo_apellido;
+        this.edad = edad;
         this.nacimiento = nacimiento;
         this.email = email;
     }
 
-    public Person(Long id, String nombre, String primer_apellido, String segundo_apellido, LocalDate nacimiento, String email) {
+    public Person(Long id, String nombre, String primer_apellido, String segundo_apellido, Integer edad, LocalDate nacimiento, String email) {
         this.id = id;
         this.nombre = nombre;
         this.primer_apellido = primer_apellido;
         this.segundo_apellido = segundo_apellido;
+        this.edad = edad;
         this.nacimiento = nacimiento;
         this.email = email;
     }
-
+    
 
     //Getters and Setter haciendo referencia a los campos en la tabla
     public Long getId() {
@@ -87,7 +88,7 @@ public class Person {
 
 
     public Integer getEdad() {
-        return Period.between(this.nacimiento, LocalDate.now()).getYears();
+        return this.edad;
     }
 
     public void setEdad(Integer edad) {
@@ -111,7 +112,6 @@ public class Person {
     }
 
 
-    // Generación de metodo toString
     @Override
     public String toString() {
         return "{" +
@@ -124,8 +124,6 @@ public class Person {
             ", email='" + getEmail() + "'" +
             "}";
     }
-
-
     
 
         
